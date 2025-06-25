@@ -40,7 +40,28 @@ public class LogicaClasificacion {
      * @return true si forman un palíndromo, false si no
      */
     public boolean verificarPalindromoCola(Queue<String> cola) {
+        Queue<String> invertido = new LinkedList<>();
+        Queue<String> copiaCola = new LinkedList<>();
+        Stack<String> pilaAux = new Stack<>();
 
+
+        
+        while (!cola.isEmpty()) {
+            pilaAux.push(cola.peek());
+            copiaCola.add(cola.poll());
+        }
+        while (!pilaAux.isEmpty()) {
+            invertido.add(pilaAux.pop());
+        }
+        System.out.println(invertido);
+        System.out.println(copiaCola);
+        while (!invertido.isEmpty()) {
+            if (invertido.poll()==copiaCola.poll()) {
+                return true;
+            }
+            else break;
+        }
+        
         return false;
     }
 

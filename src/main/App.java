@@ -20,6 +20,20 @@ public class App {
         cola.add("Marta");
         
         System.out.println("Ejercicio 1\n Original:"+cola+"\nInvertido:"+logicaClasificacion.invertirColaNombres(cola));
-
+        Queue<String> cola2 = new LinkedList<>();
+        cola2.add("r");
+        cola2.add("a");
+        cola2.add("d");
+        cola2.add("a");
+        cola2.add("r");
+        System.out.println(logicaClasificacion.verificarPalindromoCola(cola2));
+        Queue<String> cola3 = new LinkedList<>();
+        cola3.add("c");
+        cola3.add("a");
+        cola3.add("s");
+        cola3.add("a");
+        System.out.println(logicaClasificacion.verificarPalindromoCola(cola2));
+        
+        
     }
 }
